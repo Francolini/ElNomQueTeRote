@@ -1,0 +1,39 @@
+/* Estilo */
+
+html{
+	background-color: #355BB2;
+}
+
+body {font-family:Georgia;font-size:100%; color:#7f7f7f;min-width:960px;background:#000}
+
+.menu {
+	padding:26px 10px 0 0; 
+	float:right;
+	list-style-type: none;
+}
+.menu li a.active,
+.menu > li > a:hover {color:#c52e02;}
+	
+.capcalera{
+	margin-top: 5px;
+	height: 150px;
+	width: 100%;
+	background-color: lightgrey;
+	}
+	
+h1{
+	font-size: 60px;
+	display: inline;
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	}
+	
+li{	
+	float: right;
+	height: 50px;
+	width: 120px;
+	}
+
