@@ -1,28 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php 
+include("app/view/HFPages/header.php");
+?>
 
-<LINK rel=stylesheet href="CSS/estilo.css" type="text/css" media="screen">
+<div class="video">
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Froberto.titoluna.5%2Fvideos%2F842795782492074%2F&width=500&show_text=false&height=281&appId" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div>
 
-<html>
+<h1> Bienvenido a Karisma Events</h1>
 
-	<head>
-		<title> KARISMA EVENTS </title>
-	</head>
+<h2> Cantante del genero latino & Show-man Musical de los mejores éxitos de ahora y de todos Los tiempos. </h2>
 
-	<body>
-
-		<div class="capcalera">
-	        
-	        <h1>Karisma<span>EVENTS</span></a></h1>
-	        <ul class="menu">
-
-	            <li><a class="active" href="Inicio.html">P&aacute;gina principal</a></li>
-	            <li><a href="Inicio.html">Log in</a></li>
-	            <li><a href="Inicio.html">Registrarse</a></li>
-	            
-	        </ul>
-
-	    </div>
-	   
-
-</html>
+<?php 
+include("app/view/HFPages/footer.php");
+?>

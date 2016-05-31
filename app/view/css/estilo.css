@@ -1,4 +1,4 @@
-/* Estilo */
+/* Estilo*/
 body{
 	margin: 0;
 }
@@ -21,6 +21,7 @@ ul {
 	padding: 0;
 	list-style-type: none;
 }
+
 ul li {
 	display: inline-block;
 	position: relative;
@@ -42,6 +43,7 @@ ul li:hover {
 	background: #555;
 	color: #fff;
 }
+
 ul li ul {
 	z-index: 2;
 	padding: 0;
@@ -54,6 +56,7 @@ ul li ul {
 	opacity: 0;
 	visibility: hidden;
 }
+
 ul li ul li { 
 	background: #555; 
 	display: block; 
@@ -71,11 +74,30 @@ ul li:hover ul {
 	visibility: visible;
 }
 
+h1, h2{
+	text-align: center;
+	color: #0A0A1C;
+	font-family: sans-serif;
+}
+
 .menu {
-	font-family: 'Raleway', sans-serif;
+	font-family: sans-serif;
 }
 
 .userMenu {
 	float: right;
+	padding: 15px;
 }
 
+.footer{
+	width: 100%;
+	color: white;
+	bottom: 0px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.video{
+	margin-top: 5%;
+    text-align: center;
+}
