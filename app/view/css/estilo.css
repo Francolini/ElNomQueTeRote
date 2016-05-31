@@ -1,39 +1,81 @@
 /* Estilo */
+body{
+	margin: 0;
+}
 
 html{
 	background-color: #355BB2;
 }
 
-body {font-family:Georgia;font-size:100%; color:#7f7f7f;min-width:960px;background:#000}
+header {
+	width: 100%;
+	height: auto;
+	background-color: #333;
+}
+
+
+ul {
+	text-align: left;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul li {
+	display: inline-block;
+	position: relative;
+	padding: 15px 0 15px 0;
+	background: #333;
+	cursor: pointer;
+	color: white;
+}
+
+ul li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   	font-size:1em;
+}
+
+ul li:hover {
+	background: #555;
+	color: #fff;
+}
+ul li ul {
+	z-index: 2;
+	padding: 0;
+	position: absolute;
+	top: 48px;
+	right: 0;
+	width: 150px;
+	box-shadow: none;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+ul li ul li { 
+	background: #555; 
+	display: block; 
+	color: #fff;
+	text-shadow: 0 -1px 0 #000;
+}
+
+ul li ul li:hover {
+	background: #666;
+}
+
+ul li:hover ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
 
 .menu {
-	padding:26px 10px 0 0; 
-	float:right;
-	list-style-type: none;
-}
-.menu li a.active,
-.menu > li > a:hover {color:#c52e02;}
-	
-.capcalera{
-	margin-top: 5px;
-	height: 150px;
-	width: 100%;
-	background-color: lightgrey;
-	}
-	
-h1{
-	font-size: 60px;
-	display: inline;
+	font-family: 'Raleway', sans-serif;
 }
 
-ul{
+.userMenu {
 	float: right;
-	list-style-type: none;
-	}
-	
-li{	
-	float: right;
-	height: 50px;
-	width: 120px;
-	}
+}
 
