@@ -14,4 +14,12 @@ function goRegister(){
 function goLogin(){
 	include("app/view/pages/login.php");
 }
+
+function goIndexUser(){
+	include("app/view/pages/indexUser.php");
+}
+
+function goLoginError(){
+	include("app/view/pages/loginError.php");
+}
 ?>

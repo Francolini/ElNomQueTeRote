@@ -4,8 +4,6 @@ include("app/controller/mainController.php");
 include("app/controller/cancionesController.php");
 include("app/controller/usuarioController.php");
 
-
-
 if(empty($_GET)){
 	goPrincipal();
 }else{
@@ -37,6 +35,18 @@ if(empty($_GET)){
 			case "login":
 
 			goLogin();
+
+			break;
+
+			case "indexUser":
+
+			goIndexUser();
+
+			break;
+
+			case "loginError":
+
+			goLoginError();
 
 			break;
 

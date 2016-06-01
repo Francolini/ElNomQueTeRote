@@ -16,9 +16,16 @@ class Usuario extends Database{
 		$login="SELECT usuario, contrasena FROM clientes WHERE usuario='$usuario' AND contrasena='$contraseña';";
 
 		if($usuario = $this->consulta($login)){
-			$_SESSION["username"] = $usuario->usuario;
-			header('Location: index.php?page=indexUser');
+			$contar=mysqli_num_rows($this->consulta($login));
+			if($contar){
+				$_SESSION["username"] = $usuario->usuario;
+				header('Location: index.php?page=indexUser');
+			}else{
+				header('Location: index.php?page=loginError');
+			}
+			
 		}
+		
 	}
 }
 ?>
