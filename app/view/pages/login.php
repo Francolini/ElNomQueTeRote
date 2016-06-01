@@ -14,8 +14,7 @@ include("app/view/HFPages/header.php");
 
 </form>
 
-  
-<script type="text/javascript" src="app/view/js/validaciones.js"></script>
+  <script type="text/javascript" src="app/view/js/validaciones.js"></script>
 
 <?php 
 include("app/view/HFPages/footer.php");

@@ -92,6 +92,7 @@ h1, h2{
 .footer{
 	width: 100%;
 	color: white;
+	position: fixed;
 	bottom: 0px;
 	font-family: sans-serif;
 	text-align: center;
