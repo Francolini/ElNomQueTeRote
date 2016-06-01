@@ -53,7 +53,7 @@ function validaContraseñasIguales(pass, repPass, info){
 		return true;
 	}
 
-	info.innerHTML+="Las contraseñas no coinciden. </br>";
+	info.innerHTML+="LAS CONTRASEÑAS NO COINCIDEN. </br>";
 
 	return false;
 }
@@ -63,7 +63,7 @@ function validaContraseñasVacias(pass, repPass, info){
 		return true;
 	}
 
-	info.innerHTML+="Los campos de contraseña y el de repetir contraseñas no deben estar vacios. </br>";
+	info.innerHTML+="LOS CAMPOS DE CONTRASEÑA NO DEBEN ESTAR VACIOS. </br>";
 
 	return false;
 }
@@ -73,19 +73,19 @@ function validaContraseñaVacia(pass, info){
 		return true;
 	}
 
-	info.innerHTML+="El campo de Contraseña está vacio. </br>";
+	info.innerHTML+="EL CAMPO DE CONTRASEÑA ESTÁ VACIO. </br>";
 
 	return false;
 }
 
 function validaUsuario(usu, info){
-	var condicion=/^[a-zA-Z][a-zA-Z0-9-_\.]{3,20}$/;
+	var condicion=/^[a-zA-Z][a-zA-Z0-9-_\.]{2,21}$/;
 
 	if(usu.match(condicion)){
 		return true;
 	}
 
-	info.innerHTML+="El usuario debe contener entre 4 y 19 caracteres. </br>";
+	info.innerHTML+="EL USUARIO DEBE CONTENER ENTRE 3 Y 20 CARACTERES. </br>";
 
 	return false;
 }
