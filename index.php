@@ -28,11 +28,6 @@ if(empty($_GET)){
 
 			break;
 
-			case "listSongs":
-
-			listarCanciones();
-
-			break;
 		}
 	}
 

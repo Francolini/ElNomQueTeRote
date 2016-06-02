@@ -6,12 +6,23 @@ function listarCanciones(){
 	$canciones=new Canciones();
 
 	$listaCanciones = $canciones->listarCanciones();
+	$tabla = '<table class="tabla">';
+	$tabla .= '<tr>';
+	$tabla .= '<td>Nombre de la cancion</td>';
+	$tabla .= '<td>Nombre del artista</td>';
+	$tabla .= '<td>Apellido del artista</td>';
+	$tabla .= '</tr>';
+	for ($i=0; $i < sizeof($listaCanciones["canciones"]) ; $i++) {
+		$tabla .= '<tr id="'.$i.'">';
 
-	for ($i=0; $i < sizeof($listaCanciones["canciones"]) ; $i++) { 
-		echo $listaCanciones["canciones"][$i].'<button type="button" onclick="anyadirCancion();" name="canciones[]" value="'.$listaCanciones["canciones"][$i].'">Añadir</button><br>';
-		//echo $listaCanciones["artistas"][$i];
-		//echo $listaCanciones["apellido"][$i];
+		$tabla .= "<td>".$listaCanciones["canciones"][$i]."</td>";
+		$tabla .= "<td>".$listaCanciones["artistas"][$i]."</td>";
+		$tabla .= "<td>".$listaCanciones["apellido"][$i]."</td>";
+		$tabla .= "<td>".'<button data-idCancion="'.$listaCanciones["idCanciones"][$i].' id="bot'.$i.'" onclick="anyadirCanciones('.$i.', this);">Añadir</button>'.'</td>';
+		$tabla .= "</tr>";
 	}
+	$tabla .= "</table>";
+	return $tabla;
 }
 
 ?>
