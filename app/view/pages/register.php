@@ -2,11 +2,11 @@
 include("app/view/HFPages/header.php");
 ?>
 
-<p class="titulo"> REGISTRO </p>
+<div class="bannerRegistro"></div>
 
 <form action="index.php?action=register" method="post" id="registro">
 
-			<div  class="formulario"> <!--<div class="imgUsu"></div>--><input name = "username" id="usuario" class="text" type="text" placeholder="Nombre de usuario"></div>
+			<div  class="formulario"> <input name = "username" id="usuario" class="text" type="text" placeholder="Nombre de usuario"></div>
 		
 			<div  class="formulario"> <input name = "password" id="pass" class="text" type="password" placeholder="Contraseña"></div>
 

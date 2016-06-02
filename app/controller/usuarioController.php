@@ -13,4 +13,9 @@ function login(){
 	$usuario->login($_POST["username"], $_POST["password"]);
 }
 
+function logout(){
+	session_destroy();
+	header("Location: index.php");
+}
+
 ?>

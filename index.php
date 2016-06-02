@@ -21,6 +21,18 @@ if(empty($_GET)){
 			logIn();
 
 			break;
+
+			case "logout":
+
+			logout();
+
+			break;
+
+			case "listSongs":
+
+			listarCanciones();
+
+			break;
 		}
 	}
 
@@ -47,6 +59,12 @@ if(empty($_GET)){
 			case "loginError":
 
 			goLoginError();
+
+			break;
+
+			case "songs":
+
+			goSongs();
 
 			break;
 

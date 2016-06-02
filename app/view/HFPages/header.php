@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_SESSION["username"])) {
-  $username = '<a href="index.php?page=profile">'.$_SESSION["username"].'</a>
+  $username = 'Bienvenido <a href="index.php?page=indexUser"> '.$_SESSION["username"].'</a>
                   <ul>
                     <li><a href="index.php?action=logout">Salir</a></li>
                   </ul>';
@@ -28,9 +28,26 @@ else {
       <ul>
         <li><a href="index.php">Karisma</a></li>
         <li><a href="index.php?page=about"> Quienes somos </a></li>
-        <li><a href="index.php?page=register"> Registrarse </a></li>
+
+        <?php  
+
+        if(!isset($_SESSION["username"])){
+          echo '<li><a href="index.php?page=register"> Registrarse </a></li>';
+        }
+
+        ?>
+
+        <?php  
+
+        if(isset($_SESSION["username"])){
+          echo '<li><a href="index.php?page=songs"> Canciones </a></li>';
+        }
+
+        ?>
+
         <li class="userMenu">
         <?php echo $username ?>
-        </li>          
+        </li> 
+                 
       </ul>
     </header>

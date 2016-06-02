@@ -22,4 +22,8 @@ function goIndexUser(){
 function goLoginError(){
 	include("app/view/pages/loginError.php");
 }
+
+function goSongs(){
+	include("app/view/pages/songs.php");
+}
 ?>
