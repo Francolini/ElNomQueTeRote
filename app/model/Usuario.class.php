@@ -26,5 +26,20 @@ class Usuario extends Database{
 		}
 		
 	}
+
+	public function deleteAccount($usuario, $contraseña){
+		$consultar="SELECT usuario, contrasena FROM clientes WHERE usuario='$usuario' AND contrasena='$contraseña';";
+		$borrar="DELETE FROM clientes WHERE usuario='$usuario' AND contrasena='$contraseña';";
+
+		if($usuario = $this->consulta($consultar)){
+			if(mysqli_num_rows($usuario)){
+				$this->consulta($borrar);
+				header('Location: index.php?action=logout');
+			}else{
+				header('Location: index.php?page=deleteAccountError');
+			}
+			
+		}
+	}
 }
 ?>

@@ -4,6 +4,8 @@ if(isset($_SESSION["username"])) {
   $username = 'Bienvenido <a href="index.php?page=indexUser"> '.$_SESSION["username"].'</a>
                   <ul>
                     <li><a href="index.php?action=logout">Salir</a></li>
+                    <li><a href="index.php?page=deleteAccount">Borrar Cuenta</a></li>
+                    <li><a href="index.php?action=modPassword">Cambiar contraseña</a></li>
                   </ul>';
 }
 else {

@@ -15,9 +15,9 @@ function listarCanciones(){
 	for ($i=0; $i < sizeof($listaCanciones["canciones"]) ; $i++) {
 		$tabla .= '<tr id="'.$i.'">';
 
-		$tabla .= "<td>".$listaCanciones["canciones"][$i]."</td>";
-		$tabla .= "<td>".$listaCanciones["artistas"][$i]."</td>";
-		$tabla .= "<td>".$listaCanciones["apellido"][$i]."</td>";
+		$tabla .= '<td id="ncan'.$i.'">'.$listaCanciones["canciones"][$i]."</td>";
+		$tabla .= '<td id="nart'.$i.'">'.$listaCanciones["artistas"][$i]."</td>";
+		$tabla .= '<td id="nape'.$i.'">'.$listaCanciones["apellido"][$i]."</td>";
 		$tabla .= "<td>".'<button data-idCancion="'.$listaCanciones["idCanciones"][$i].' id="bot'.$i.'" onclick="anyadirCanciones('.$i.', this);">Añadir</button>'.'</td>';
 		$tabla .= "</tr>";
 	}

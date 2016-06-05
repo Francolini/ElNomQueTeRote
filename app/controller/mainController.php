@@ -26,4 +26,16 @@ function goLoginError(){
 function goSongs(){
 	include("app/view/pages/songs.php");
 }
+
+function goDeleteAccount(){
+	include("app/view/pages/deleteAccount.php");
+}
+
+function goDeleteAccountError(){
+	include("app/view/pages/deleteAccountError.php");
+}
+
+function goModPassword(){
+	include("app/view/pages/modPassword.php");
+}
 ?>

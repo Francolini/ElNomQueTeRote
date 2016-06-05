@@ -10,19 +10,12 @@ function validaRegistro(){
 
 	if(!validaContraseñasIguales(pass, repPass, informacion)){
 		validado=false;
-	}
-
-	if(!validaContraseñasVacias(pass, repPass, informacion)){
-		validado=false;
-	}
-
+	
 	if(!validaUsuario(usuario, informacion)){
 		validado=false;
 	}
 
-	if(validado){
-		document.getElementById("registro").submit();	
-	}
+	return validado;
 
 }
 
@@ -34,17 +27,15 @@ function validaLogin(){
 	var usuario=document.getElementById("usuario").value;
 	var pass=document.getElementById("pass").value;
 
-	if(!validaContraseñaVacia(pass, informacion)){
-		validado=false;
-	}
-
 	if(!validaUsuario(usuario, informacion)){
 		validado=false;
 	}
 
-	if(validado){
-		document.getElementById("registro").submit();	
+	if(!validaVacioLogin(usuario, pass, informacion)){
+		validado=false;
 	}
+
+	return validado;
 
 }
 
@@ -53,27 +44,7 @@ function validaContraseñasIguales(pass, repPass, info){
 		return true;
 	}
 
-	info.innerHTML+="LAS CONTRASEÑAS NO COINCIDEN. </br>";
-
-	return false;
-}
-
-function validaContraseñasVacias(pass, repPass, info){
-	if(pass!="" || repPass!=""){
-		return true;
-	}
-
-	info.innerHTML+="LOS CAMPOS DE CONTRASEÑA NO DEBEN ESTAR VACIOS. </br>";
-
-	return false;
-}
-
-function validaContraseñaVacia(pass, info){
-	if(pass!=""){
-		return true;
-	}
-
-	info.innerHTML+="EL CAMPO DE CONTRASEÑA ESTÁ VACIO. </br>";
+	info.innerHTML+="Las contraseñas no coinciden. </br>";
 
 	return false;
 }
@@ -85,7 +56,23 @@ function validaUsuario(usu, info){
 		return true;
 	}
 
-	info.innerHTML+="EL USUARIO DEBE CONTENER ENTRE 3 Y 20 CARACTERES. </br>";
+	info.innerHTML+="El campo de usuario debe contener entre 3 y 20 caracteres. </br>";
 
 	return false;
+}
+
+function validaVacioLogin(usu, pass, info){
+	var valido=true;
+
+	if(usu == null || usu==""){
+		valido=false;
+		info+="El campo del usuario esta vacio </br>";
+	}
+
+	if(pass == null || pass == ""){
+		valido=false;
+		info+="El campo de la contraseña esta vacion </br>";
+	}
+
+	return valido;
 }

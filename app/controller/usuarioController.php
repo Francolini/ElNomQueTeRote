@@ -18,4 +18,9 @@ function logout(){
 	header("Location: index.php");
 }
 
+function deleteAccount(){
+	$usuario=new Usuario();
+	$usuario->deleteAccount($_SESSION["username"], $_POST["password"]);
+}
+
 ?>

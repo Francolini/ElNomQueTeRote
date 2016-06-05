@@ -28,6 +28,12 @@ if(empty($_GET)){
 
 			break;
 
+			case "deleteAccount":
+
+			deleteAccount();
+
+			break;
+
 		}
 	}
 
@@ -60,6 +66,24 @@ if(empty($_GET)){
 			case "songs":
 
 			goSongs();
+
+			break;
+
+			case "deleteAccount";
+
+			goDeleteAccount();
+
+			break;
+
+			case "deleteAccountError";
+
+			goDeleteAccountError();
+
+			break;
+
+			case "modPassword":
+
+			goModPassword();
 
 			break;
 
