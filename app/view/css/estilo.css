@@ -1,10 +1,10 @@
 /* Estilo*/
 body{
 	margin: 0;
+	background-image: url("../img/background.jpg");
 }
 
 html{
-	background-color: #1687CF;
 }
 
 header {
@@ -79,19 +79,56 @@ h1, h2{
 	color: #0A0A1C;
 	font-family: sans-serif;
 }
+ 
+.text {
+    background: #333;
+    color: #ccc;
+    width: 195px;
+    padding: 5px;
+    border-radius: 20px;
+    transition: 250ms all ease;
+    outline: 0;
+    border: 5px;
+    text-align: center;
+	margin-top: 15px;
+	font-size: 20px;
+}
 
-.formulario{
+.text:focus {
+    width: 300px;
+} 
+
+
+.campo{
 	text-align: center;
-	padding: 20px;
+	padding: 4px;
 	margin-top: 15px;
 	font-family: impact;
 	font-size: 20px;
 }
 
-.bordeForm{
-	border: 5px solid red;
-	margin-left: 35%;
-	float: left;
+.button{
+	background: #111;
+    color: #ccc;
+    width: 195px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 20px;
+    text-align: center;
+	margin-top: 15px;
+	font-size: 20px;
+}
+
+.button:focus {
+   	background: #555;
+} 
+
+#informacion{
+	margin-left: 30%;
+	margin-right: 30%;
+	font-family: impact;
+	font-size: 20px;
+	padding: 10px;
 }
 
 b{
@@ -145,8 +182,3 @@ b{
 	margin-top: 5%;
     text-align: center;
 }
-/*
-.titulo{
-	text-align: center;
-	font-size: 50px;
-}*/

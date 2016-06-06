@@ -2,17 +2,17 @@
 include("app/view/HFPages/header.php");
 ?>
 
-<div class="bannerRegistro"></div>
+<div class="bannerRegistro"></div> <!-- action="index.php?action=register" --> 
 
-<form action="index.php?action=register" method="post" id="registro">
+<form action="index.php?action=register" method="post" id="registro" onsubmit="return validaRegistro();">
 
-			<div class="formulario">Nombre de usuario</br><input size="30" name = "username" id="usuario" class="text" type="text" placeholder="Nombre de usuario"></div>
+			<div class="campo">Nombre de usuario</br><input size="30" name = "username" id="usuario" class="text" type="text" placeholder="Nombre de usuario" required></div>
 		
-			<div class="formulario">Contraseña</br><input size="30" name = "password" id="pass" class="text" type="password" placeholder="Contraseña"></div>
+			<div class="campo">Contraseña</br><input size="30" name = "password" id="pass" class="text" type="password" placeholder="Contraseña" required></div>
 
-			<div  class="formulario">Repita contraseña</br> <input size="30" name = "confirmPassword" id="repPass" class="text" type="password" placeholder="Confirmar contraseña"></div>
+			<div  class="campo">Repita contraseña</br> <input size="30" name = "confirmPassword" id="repPass" class="text" type="password" placeholder="Confirmar contraseña" required></div>
 
-			<div class="formulario"><button value = "Regístrate" onclick="validaRegistro()"> Registrarse </button></div>
+			<div class="campo"><button class="button" type="submit" value="Regístrate" > Registrarse </button></div>
 
 			<b><div id="informacion" class="formulario"></div></b>
 

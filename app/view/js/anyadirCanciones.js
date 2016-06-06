@@ -1,35 +1,19 @@
 
-function anyadirCanciones(i, bot){
+function anyadirCanciones(){
 	
-	var fila = document.getElementById(i);
-	var numFila = fila.id;
-	var boton = bot;
+	var select = document.getElementById("select");
 	
-	boton.remove();
+	var cancion = document.createElement("div");
+	cancion.setAttribute("onclick", "this.remove();");
+	cancion.innerHTML = select.options[select.selectedIndex].text;
 
-	var cancionesUsuario = document.getElementById("cancionesUsuario");
+	var oculto = document.createElement("input");
+	oculto.setAttribute("type", "hidden");
+	oculto.setAttribute("value", select.value);
+	oculto.setAttribute("name", "listaCanciones[]");
 
-	var tabla = document.createElement("table");
-	cancionesUsuario.appendChild(tabla);
-	tabla.setAttribute("id", "tablaCanciones");
-	var tupla = document.createElement("tr");
-	var campo = document.createElement("td");
-	tabla.appendChild(tupla);
-	tupla.appendChild(campo);
+	cancion.appendChild(oculto);
 
-	campo.innerHTML = fila.innerHTML;
-
-	fila.remove();
-
+	var listaCanciones = document.getElementById("cancionesUsuario");
+	listaCanciones.appendChild(cancion);
 }
-
-/*
-function borrarCancionFavorita(numBorrados){
-	
-	var filaId = document.getElementById(numBorrados);
-
-
-
-	filaId.remove();
-	
-}*/

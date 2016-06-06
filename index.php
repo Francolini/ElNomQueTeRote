@@ -34,6 +34,12 @@ if(empty($_GET)){
 
 			break;
 
+			case "addSongs":
+
+			addSongs();
+
+			break;
+
 		}
 	}
 

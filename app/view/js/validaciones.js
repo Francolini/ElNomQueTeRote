@@ -10,6 +10,7 @@ function validaRegistro(){
 
 	if(!validaContraseñasIguales(pass, repPass, informacion)){
 		validado=false;
+	}
 	
 	if(!validaUsuario(usuario, informacion)){
 		validado=false;
@@ -43,7 +44,7 @@ function validaContraseñasIguales(pass, repPass, info){
 	if(pass==repPass){
 		return true;
 	}
-
+	
 	info.innerHTML+="Las contraseñas no coinciden. </br>";
 
 	return false;

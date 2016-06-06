@@ -3,7 +3,7 @@ class Database{
 	protected $conexion;
 
 	protected function conectar(){
-		$this->conexion=mysqli_connect("localhost", "root", "", "karisma") or die("Error al conectar con la base de datos.");
+		$this->conexion=mysqli_connect("localhost", "root", "", "karisma") or die("Error al conectar con la base de datos.".mysqli_connect_error());
 	}
 
 	protected function consulta($consulta){

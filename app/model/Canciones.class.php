@@ -15,5 +15,14 @@ class Canciones extends Database{
 
 		return array("canciones" => $cancionesArray, "artistas" => $artistas, "apellido" => $apellidoArtista, "idCanciones" => $idCancion);
 	}
+
+	public function anyadirCancionesUsuario($id, $lista){
+		for($i = 0; $i < sizeof($lista); $i++){
+			$insert = "INSERT INTO canciones_clientes VALUES('$id', '$lista[$i]');";
+			$this->consulta($insert);
+		}
+
+		header("Location: index.php?page=indexUser");
+	}
 }
 ?>
