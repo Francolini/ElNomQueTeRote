@@ -5,6 +5,7 @@ function anyadirCanciones(){
 	
 	var cancion = document.createElement("div");
 	cancion.setAttribute("onclick", "this.remove();");
+	cancion.setAttribute("class", "divOculto");
 	cancion.innerHTML = select.options[select.selectedIndex].text;
 
 	var oculto = document.createElement("input");

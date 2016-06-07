@@ -2,9 +2,8 @@
 body{
 	margin: 0;
 	background-image: url("../img/background.jpg");
-}
-
-html{
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 header {
@@ -79,6 +78,32 @@ h1, h2{
 	color: #0A0A1C;
 	font-family: sans-serif;
 }
+
+select{
+	background: #222;
+    color: #999;
+    width: 300px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    text-align: center;
+	margin-top: 15px;
+	font-size: 20px;
+}
+
+.formulario{
+	text-align: center;
+	display: block;
+}
+
+.divOculto{
+	margin-top: 1%;
+	padding: 5px;
+	font-family: impact;
+	size: 25px;
+	margin-right: 35%;
+	margin-left: 35%;
+}
  
 .text {
     background: #333;
@@ -129,6 +154,7 @@ h1, h2{
 	font-family: impact;
 	font-size: 20px;
 	padding: 10px;
+	text-align: center;
 }
 
 b{
@@ -159,6 +185,14 @@ b{
 	margin-left: 38%;
 }
 
+.bannerCambiar{
+	width: 340px;
+	height: 100px;
+	background-image: url("../img/banner-cambiar.png");
+	margin-top: 3%;
+	margin-left: 38%;
+}
+
 
 .menu {
 	font-family: sans-serif;
@@ -171,7 +205,7 @@ b{
 
 .footer{
 	width: 100%;
-	color: white;
+	color: black;
 	position: fixed;
 	bottom: 0px;
 	font-family: sans-serif;

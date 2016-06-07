@@ -2,7 +2,7 @@
 include("app/view/HFPages/header.php");
 ?>
 
-<form action="index.php?action=addSongs" method="post">
+<form class="formulario" action="index.php?action=addSongs" method="post">
 	<select id="select">
 
 	<?php 
@@ -11,8 +11,8 @@ include("app/view/HFPages/header.php");
 
 	</select>
 
-	<button type="button" class="buttonAdd" onclick="anyadirCanciones();"> Añadir cancion </button>
-	<input type="submit" class="buttonAdd" value="Elegir canciones"/>
+	<button type="button" class="button" onclick="anyadirCanciones();"> Añadir cancion </button>
+	<input type="submit" class="button" value="Elegir canciones"/>
 
 	<div id="cancionesUsuario"></div>
 

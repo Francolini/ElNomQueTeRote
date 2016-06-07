@@ -5,7 +5,7 @@ if(isset($_SESSION["username"])) {
                   <ul>
                     <li><a href="index.php?action=logout">Salir</a></li>
                     <li><a href="index.php?page=deleteAccount">Borrar Cuenta</a></li>
-                    <li><a href="index.php?action=modPassword">Cambiar contraseña</a></li>
+                    <li><a href="index.php?page=changePassword">Cambiar pass</a></li>
                   </ul>';
 }
 else {

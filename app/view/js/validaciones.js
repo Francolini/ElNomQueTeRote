@@ -51,13 +51,13 @@ function validaContraseñasIguales(pass, repPass, info){
 }
 
 function validaUsuario(usu, info){
-	var condicion=/^[a-zA-Z][a-zA-Z0-9-_\.]{2,21}$/;
+	var condicion=/^\w{5,20}$/;
 
 	if(usu.match(condicion)){
 		return true;
 	}
 
-	info.innerHTML+="El campo de usuario debe contener entre 3 y 20 caracteres. </br>";
+	info.innerHTML+="El campo de usuario debe contener entre 5 y 20 caracteres. </br>";
 
 	return false;
 }

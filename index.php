@@ -40,6 +40,12 @@ if(empty($_GET)){
 
 			break;
 
+			case "changePassword":
+
+			changePassword();
+
+			break;
+
 		}
 	}
 
@@ -87,9 +93,15 @@ if(empty($_GET)){
 
 			break;
 
-			case "modPassword":
+			case "changePassword":
 
-			goModPassword();
+			goChangePassword();
+
+			break;
+
+			case "changePasswordError":
+
+			goChangePasswordError();
 
 			break;
 

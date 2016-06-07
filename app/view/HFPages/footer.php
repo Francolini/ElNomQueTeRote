@@ -1,5 +1,5 @@
 	<div class="footer">
-        <p>© 2016 Karisma</p>
+        <b><p>© 2016 Karisma</p></b>
     </div>
 </body>
 </html>

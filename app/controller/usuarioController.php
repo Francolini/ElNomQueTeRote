@@ -23,4 +23,9 @@ function deleteAccount(){
 	$usuario->deleteAccount($_SESSION["username"], $_POST["password"]);
 }
 
+function changePassword(){
+	$usuario=new Usuario();
+	$usuario->changePassword($_SESSION["username"], $_POST["password"], $_POST["newPassword"]);
+}
+
 ?>

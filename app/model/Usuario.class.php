@@ -43,5 +43,20 @@ class Usuario extends Database{
 			
 		}
 	}
+
+	public function changePassword($usuario, $contraseña, $nuevaContraseña){
+		$consultar="SELECT usuario, contrasena FROM clientes WHERE usuario='$usuario' AND contrasena='$contraseña';";
+		$cambiar="UPDATE clientes SET contrasena='$nuevaContraseña' WHERE usuario='$usuario' AND contrasena='$contraseña';";
+
+		if($usuario = $this->consulta($consultar)){
+			if(mysqli_num_rows($usuario)){
+				$this->consulta($cambiar);
+				header('Location: index.php?page=indexUser');
+			}else{
+				header('Location: index.php?page=changePasswordError');
+			}
+			
+		}
+	}
 }
 ?>

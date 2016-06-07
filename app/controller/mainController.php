@@ -35,7 +35,11 @@ function goDeleteAccountError(){
 	include("app/view/pages/deleteAccountError.php");
 }
 
-function goModPassword(){
-	include("app/view/pages/modPassword.php");
+function goChangePassword(){
+	include("app/view/pages/changePassword.php");
+}
+
+function goChangePasswordError(){
+	include("app/view/pages/changePasswordError.php");
 }
 ?>
