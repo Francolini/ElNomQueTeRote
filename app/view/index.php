@@ -1,4 +1,5 @@
 <?php 
+//Incluimos el header, en esta y en todas las demas paginas
 include("app/view/HFPages/header.php");
 ?>
 
@@ -15,5 +16,6 @@ include("app/view/HFPages/header.php");
 </div>
 
 <?php 
+//Incluimos el footer en esta y en todas las demas paginas
 include("app/view/HFPages/footer.php");
 ?>

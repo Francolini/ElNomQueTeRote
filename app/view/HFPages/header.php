@@ -1,5 +1,7 @@
 <?php
+//HEADER Se llamara desde cada pagina ahorrandonos codigo
 
+//Esto forma parte del menu, nos dice que si hay alguien logueado nos mostrará su nombre en el menu y una serie de opciones como salir del perfil, borrarlo o cambiar la contraseña
 if(isset($_SESSION["username"])) {
   $username = 'Bienvenido <a href="index.php?page=indexUser"> '.$_SESSION["username"].'</a>
                   <ul>
@@ -8,7 +10,7 @@ if(isset($_SESSION["username"])) {
                     <li><a href="index.php?page=changePassword">Cambiar pass</a></li>
                   </ul>';
 }
-else {
+else { //En caso de que no haya nadie logueado solo saldra la opcion de iniciar sesion en el menu
   $username = '<a href="index.php?page=login">Iniciar Sesión</a>';
 }
 ?>
@@ -31,7 +33,7 @@ else {
         <li><a href="index.php">Karisma</a></li>
 
         <?php  
-
+        //Si no hay nadie logueado nos aparecera la opcion de registrarse
         if(!isset($_SESSION["username"])){
           echo '<li><a href="index.php?page=register"> Registrarse </a></li>';
         }
@@ -39,7 +41,7 @@ else {
         ?>
 
         <?php  
-
+        //Si hay alguien logueado mostrara en el menu la opcion de poder ver las canciones de la web
         if(isset($_SESSION["username"])){
           echo '<li><a href="index.php?page=songs"> Canciones </a></li>';
         }
@@ -47,7 +49,12 @@ else {
         ?>
 
         <li class="userMenu">
-        <?php echo $username ?>
+        <?php 
+        
+        //Mostramos por ultimo o el nombre del usuario registrado o la opcion de iniciar sesion, es decir el primer php que hay mas arriba
+        echo $username 
+
+        ?>
         </li> 
                  
       </ul>

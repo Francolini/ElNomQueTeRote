@@ -3,3 +3,5 @@
     </div>
 </body>
 </html>
+
+<!-- FOOTER será llamado desde cualquier pagina, nos ahorrará mucho codigo -->

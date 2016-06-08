@@ -2,8 +2,9 @@
 include("app/view/HFPages/header.php");
 ?>
 
-<div class="bannerRegistro"></div> <!-- action="index.php?action=register" --> 
+<div class="bannerRegistro"></div>
 
+<!-- Si el javaScript valida los campos el formulario hace la accion de darle valor a la variable "action" para que llame a un metodo en index.php -->
 <form action="index.php?action=register" method="post" id="registro" onsubmit="return validaRegistro();">
 
 			<div class="campo">Nombre de usuario</br><input size="30" name = "username" id="usuario" class="text" type="text" placeholder="Nombre de usuario" required></div>

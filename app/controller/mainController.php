@@ -1,4 +1,6 @@
 <?php 
+
+//Aqui no hay mucho que explicar, segun el valor de "page" se llamara a un metodo o a otro y cada uno nos enviara a una pagina diferente
 function goPrincipal(){
 	include("app/view/index.php");
 }

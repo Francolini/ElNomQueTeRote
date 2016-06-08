@@ -2,7 +2,7 @@
 include("app/view/HFPages/header.php");
 ?>
 
-<div class="bannerRegistro"></div> <!-- action="index.php?action=register" --> 
+<div class="bannerRegistro"></div>
 
 <form action="index.php?action=register" method="post" id="registro" onsubmit="return validaRegistro();">
 

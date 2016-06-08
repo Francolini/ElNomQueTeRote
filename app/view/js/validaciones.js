@@ -32,10 +32,6 @@ function validaLogin(){
 		validado=false;
 	}
 
-	if(!validaVacioLogin(usuario, pass, informacion)){
-		validado=false;
-	}
-
 	return validado;
 
 }
@@ -60,20 +56,4 @@ function validaUsuario(usu, info){
 	info.innerHTML+="El campo de usuario debe contener entre 5 y 20 caracteres. </br>";
 
 	return false;
-}
-
-function validaVacioLogin(usu, pass, info){
-	var valido=true;
-
-	if(usu == null || usu==""){
-		valido=false;
-		info+="El campo del usuario esta vacio </br>";
-	}
-
-	if(pass == null || pass == ""){
-		valido=false;
-		info+="El campo de la contraseña esta vacion </br>";
-	}
-
-	return valido;
 }
