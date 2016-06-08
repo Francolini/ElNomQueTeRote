@@ -2,6 +2,10 @@
 include("app/view/HFPages/header.php");
 ?>
 
+<div class="bannerSongs"></div>
+
+<h4> Nota: Haz click en la cancion elegida para borrarla</h4>
+
 <form class="formulario" action="index.php?action=addSongs" method="post">
 	<select id="select">
 
@@ -20,8 +24,6 @@ include("app/view/HFPages/header.php");
 
 <script type="text/javascript" src="app/view/js/anyadirCanciones.js">
 </script>
-
-
 
 <?php 
 include("app/view/HFPages/footer.php");

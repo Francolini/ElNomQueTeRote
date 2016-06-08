@@ -11,6 +11,10 @@ function goRegister(){
 	include("app/view/pages/register.php");
 }
 
+function goRegisterError(){
+	include("app/view/pages/registerError.php");
+}
+
 function goLogin(){
 	include("app/view/pages/login.php");
 }

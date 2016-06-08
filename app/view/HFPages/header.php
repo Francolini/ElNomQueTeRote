@@ -29,7 +29,6 @@ else {
 	 <header class = "menu">
       <ul>
         <li><a href="index.php">Karisma</a></li>
-        <li><a href="index.php?page=about"> Quienes somos </a></li>
 
         <?php  
 

@@ -2,6 +2,7 @@
 body{
 	margin: 0;
 	background-image: url("../img/background.jpg");
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -91,6 +92,39 @@ select{
 	font-size: 20px;
 }
 
+h1{
+	font-family: impact;
+}
+
+h4{
+	text-align: center;
+	font-family: sans-serif;
+}
+
+#cancionesUsuario{
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 15px;
+}
+
+.listaCanciones{
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 25px; 
+}
+
+.cancion{
+	padding: 15px;
+	font-family: impact;
+	display: inline;
+	float: left;
+	background-color: #666;
+	border-radius: 50px;
+	margin: 5px;
+}
+
 .formulario{
 	text-align: center;
 	display: block;
@@ -144,9 +178,20 @@ select{
 	font-size: 20px;
 }
 
+.delButton{
+	background: #222;
+    color: #999;
+    width: 100px;
+    outline: 0;
+    border-radius: 10px;
+    text-align: center;
+	margin-left: 15px;
+	font-size: 20px;
+}
+
 .button:focus {
    	background: #555;
-} 
+}
 
 #informacion{
 	margin-left: 30%;
@@ -165,7 +210,15 @@ b{
 	width: 340px;
 	height: 100px;
 	background-image: url("../img/banner-registro.png");
-	margin-top: 3%;
+	margin-top: 2%;
+	margin-left: 38%;
+}
+
+.bannerIndex{
+	width: 340px;
+	height: 100px;
+	background-image: url("../img/banner-index.png");
+	margin-top: 2%;
 	margin-left: 38%;
 }
 
@@ -173,7 +226,7 @@ b{
 	width: 340px;
 	height: 100px;
 	background-image: url("../img/banner-login.png");
-	margin-top: 3%;
+	margin-top: 2%;
 	margin-left: 38%;
 }
 
@@ -181,7 +234,7 @@ b{
 	width: 340px;
 	height: 100px;
 	background-image: url("../img/banner-borrar.png");
-	margin-top: 3%;
+	margin-top: 2%;
 	margin-left: 38%;
 }
 
@@ -189,10 +242,25 @@ b{
 	width: 340px;
 	height: 100px;
 	background-image: url("../img/banner-cambiar.png");
-	margin-top: 3%;
+	margin-top: 2%;
 	margin-left: 38%;
 }
 
+.bannerUser{
+	width: 340px;
+	height: 100px;
+	background-image: url("../img/banner-user.png");
+	margin-top: 2%;
+	margin-left: 38%;
+}
+
+.bannerSongs{
+	width: 340px;
+	height: 80px;
+	background-image: url("../img/banner-songs.png");
+	margin-top: 2%;
+	margin-left: 38%;
+}
 
 .menu {
 	font-family: sans-serif;
@@ -213,6 +281,6 @@ b{
 }
 
 .video{
-	margin-top: 5%;
+	margin-top: 2%;
     text-align: center;
 }

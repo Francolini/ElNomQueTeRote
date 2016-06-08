@@ -24,5 +24,34 @@ class Canciones extends Database{
 
 		header("Location: index.php?page=indexUser");
 	}
+
+	public function listarCancionesUsuario($id){
+		$cancion="SELECT DISTINCT c.nombre, a.Nombre, a.apellido, c.idCancion  FROM canciones c, artistas a, canciones_clientes cc WHERE c.idArtista=a.idArtista AND cc.idCliente='$id' AND c.idCancion=cc.idCancion;";
+
+		$canciones = $this->consulta($cancion);
+
+		while($cancionUsuario = mysqli_fetch_object($canciones)) {
+			$cancionesArray[] = $cancionUsuario->nombre;
+			$artistas[] = $cancionUsuario->Nombre;
+			$apellidoArtista[] = $cancionUsuario->apellido;
+			$idCancion[] = $cancionUsuario->idCancion;
+		}
+			
+		if(isset($cancionesArray)){
+
+			return array("cancionesUsuario" => $cancionesArray, "artistas" => $artistas, "apellido" => $apellidoArtista, "idCanciones" => $idCancion);
+		
+		}
+
+		return false;
+	}
+
+	public function borrarCancion($idCliente, $idCancion){
+		$borrar = "DELETE FROM canciones_clientes WHERE idCancion=$idCancion AND idCliente=$idCliente;";
+
+		$this->consulta($borrar);
+
+		header("Location: index.php?page=indexUser");
+	}
 }
 ?>

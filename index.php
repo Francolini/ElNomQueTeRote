@@ -46,6 +46,13 @@ if(empty($_GET)){
 
 			break;
 
+			case "borrarCancion":
+
+			$id = $_GET["id"];
+			borrarCancion($id);
+
+			break;
+
 		}
 	}
 
@@ -102,6 +109,12 @@ if(empty($_GET)){
 			case "changePasswordError":
 
 			goChangePasswordError();
+
+			break;
+
+			case "registerError":
+
+			goRegisterError();
 
 			break;
 
