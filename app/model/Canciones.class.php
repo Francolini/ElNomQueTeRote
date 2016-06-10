@@ -11,7 +11,7 @@ class Canciones extends Database{
 		$consulta="SELECT c.nombre, a.Nombre, a.apellido, c.idCancion  FROM canciones c, artistas a WHERE c.idArtista=a.idArtista;";
 		$canciones = $this->consulta($consulta); //Realiza la consulta
 		
-		//Convertimos la tabla en un objeto y mientras le queden filas ira añadiendo, a otros arrays (1 por columna), el valor correspondiente de cada columna de uno en uno (Es dificil de explicar)
+		//Convertimos la tabla en un objeto y mientras le queden filas ira añadiendo, a otros arrays (1 por columna), el valor correspondiente de cada columna de uno en uno
 		while($cancion = mysqli_fetch_object($canciones)) { 
 			$cancionesArray[] = $cancion->nombre;
 			$artistas[] = $cancion->Nombre;
